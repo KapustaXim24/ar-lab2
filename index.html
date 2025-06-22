@@ -5,11 +5,17 @@
     <title>Криворізька міська рада (VR - Three.js)</title>
     <style>
         body { margin: 0; }
-        canvas { display: block; }
+        #vr-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            outline: none;
+        }
     </style>
 </head>
 <body>
-    <!-- Підключаємо Three.js -->
+    <canvas id="vr-canvas"></canvas> <!-- Додаємо canvas сюди -->
+
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script type="importmap">
     {
@@ -18,7 +24,6 @@
         }
     }
     </script>
-    <!-- Підключаємо наш основний скрипт -->
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./main.js"></script> <!-- Змінив на ./main.js -->
 </body>
 </html>
